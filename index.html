@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>buisness page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class = "container">
+		<div class="darken"></div>
+		<header>
+			<div class = "container-burger">
+				<div class = "burger_absolute ">
+					<a class = "burger_menu" onclick = "showHide()">
+						<div class = "burger_line1"></div>
+						<div class = "burger_line2"></div>
+						<div class = "burger_line3"></div>
+					</a>
+					<nav class = "hidden_nav">
+						<a href = "#" id = "logo" class = "nav_item">
+							Company
+						</a>
+						<a href = "#" class = "nav_item">
+							produkty
+						</a>
+						<a href = "#" class = "nav_item">
+							o nas
+						</a>
+						<a href = "#" class = "nav_item">
+							galeria
+						</a>
+						<a href = "#" class = "nav_item">
+							kontakt
+						</a>
+						<a href = "#" class = "nav_item">
+							pomoc techniczna
+						</a>
+						<a href = "#" class = "nav_item">
+							praca
+						</a>
+					</nav>
+				</div>
+				<div class = "dark" onclick="showHide()"></div>
+			</div>
+			<nav class = "upper_nav">
+				<a href = "#" id = "logo" class = "nav_item">
+					Company
+				</a>
+				<a href = "#" class = "nav_item">
+					produkty
+				</a>
+				<a href = "#" class = "nav_item">
+					o nas
+				</a>
+				<a href = "#" class = "nav_item">
+					galeria
+				</a>
+				<a href = "#" class = "nav_item">
+					kontakt
+				</a>
+				<a href = "#" class = "nav_item">
+					pomoc techniczna
+				</a>
+				<a href = "#" class = "nav_item">
+					praca
+				</a>
+			</nav>
+		</header>
+		<main>
+			<section class = "slider"></section>
+		</main>
+		<address></address>
+		<footer></footer>
+	</div>
+	<script type="text/javascript">
+		function toggleMenu(){
+			document.querySelector(".burger_absolute").classList.toggle("vissible");
+			document.querySelector(".hidden_nav").classList.toggle("vissible");
+			document.querySelector(".dark").classList.toggle("vissible");
+		}
+		function showHide(){
+			document.querySelector(".burger_menu").classList.toggle("change");
+			toggleMenu();
+		}
+	</script>
+</body>
+</html>
