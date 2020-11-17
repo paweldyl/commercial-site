@@ -3,6 +3,7 @@
 <head>
 	<title>buisness page</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="css/arrow-embedded.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
 </head>
@@ -17,7 +18,7 @@
 						<div class = "burger_line2"></div>
 						<div class = "burger_line3"></div>
 					</a>
-					<nav class = "hidden_nav">
+					<nav class = "hidden_nav">	
 						<a href = "#" id = "logo" class = "nav_item">
 							Company
 						</a>
@@ -68,12 +69,64 @@
 			</nav>
 		</header>
 		<main>
-			<section class = "slider"></section>
+			<section class = "slider_container">
+				<div class = "slider" id = "slider0">
+					<div class = "slider_content">
+						<h1 id = "slider_h1">Comarch EZD: Elektroniczny Obieg Dokumentów</h1>
+						<p id = "slider_p">Zobacz jak może wyglądać praca zdalna w administracji publicznej</p>
+					</div>
+					<a href = "#" class = "slider_button">Sprawdź</a>
+					<div class = "circles">
+						<div class = "circle circle0" onclick = "slider(0,0)"></div>
+						<div class = "circle circle1" onclick = "slider(1,0)"></div>
+						<div class = "circle circle2" onclick = "slider(2,0)"></div>
+						<div class = "circle circle3" onclick = "slider(3,0)"></div>
+					</div>
+					<i class="demo-icon icon-left-open arrow" onclick = "slider(-1,0)"></i>
+					<i class="demo-icon icon-right-open arrow" onclick = "slider(-2,0)"></i>
+				</div>
+			</section>
 		</main>
-		<address></address>
-		<footer></footer>
+		<address>
+			<div class = "address_div">
+				<p class = "address_title">aktualności</p>
+				<a href = "#">wydarzenia</a>
+				<a href = "#">oferty pracy</a>
+				<a href = "#">produkty</a>
+				<a href = "#">produkty</a>
+			</div>
+			<div class = "address_div">
+				<p class = "address_title">sklep</p>
+				<p></p>
+			</div>
+			<div class = "address_div">
+				<p class = "address_title">kontakt</p>
+				<a href = "#">biuro</a>
+				<a>praca: praca@company.com</a>
+				<a href = "#">produkty</a>
+			</div>
+			<div class = "address_div">
+				<p class = "address_title">o nas</p>
+				<p></p>
+			</div>
+		</address>
+		<footer>
+			Copyright © 2020 Company SA. All rights reserved.
+		</footer>
 	</div>
 	<script type="text/javascript">
+		var current_slide = [0];
+		var number_of_slides = [4];
+		var slider_set_time_out = [4];
+		var circle_color = getComputedStyle(document.querySelector(".circle1")).backgroundColor;
+		var current_circle_color = getComputedStyle(document.querySelector(".circle0")).backgroundColor;
+		var slider_html = [
+			{
+				h1: ["Praca zdalna", "Laptopy", "Światłowód", "Programowanie dla każdego"],
+				p: ["ułatw pracę zdalną z naszym nowym oprogramowaniem!", "Sprawdź naszą najnowszą ofertę z laptopami", "oferujemy transfer nawet 1Gb/s !", "oferujemy bezpłatne programy szkoleniowe dla wszystkich"],
+				button: ["Sprawdź", "Kup teraz", "Sprawdź", "Chce się uczyć!"]
+			}
+		];
 		function toggleMenu(){
 			document.querySelector(".burger_absolute").classList.toggle("vissible");
 			document.querySelector(".hidden_nav").classList.toggle("vissible");
@@ -83,6 +136,46 @@
 			document.querySelector(".burger_menu").classList.toggle("change");
 			toggleMenu();
 		}
+		function set_slider_css(which_slide, which_slider){
+			document.querySelector("#slider"+which_slider).style.background = "url(" + "img/slide" + which_slide + ".jpg)";
+			document.querySelector("#slider"+which_slider).style.backgroundSize = "100% 100%";
+			document.querySelector("#slider"+which_slider).style.backgroundRepeat = "no-repeat";
+		}
+		function set_slider_circles(which_slide, which_slider){
+			let slider_id = "#slider"+which_slider;
+			let slider = document.querySelector(slider_id);
+			let all_circles = slider.querySelectorAll(".circles > .circle");
+			all_circles.forEach(function(circle){
+				circle.style.backgroundColor = circle_color;
+			});
+			slider.querySelector(".circle" + which_slide).style.backgroundColor = current_circle_color;
+		}
+		function set_slider_text(which_slide, which_slider){
+			document.querySelector("#slider"+which_slider+" > div > h1").innerHTML = slider_html[which_slider]["h1"][which_slide];
+			document.querySelector("#slider"+which_slider+" > div > p").innerHTML = slider_html[which_slider]["p"][which_slide];
+			document.querySelector("#slider"+which_slider+" > .slider_button").innerHTML = slider_html[which_slider]["button"][which_slide];
+		}
+		function slider(which_slide, which_slider){
+			if(which_slide == -1){
+				if(current_slide[which_slider] - 1 >= 0)
+					which_slide = current_slide[which_slider] - 1;
+				else
+					which_slide = current_slide[which_slider];
+			}
+			else if(which_slide == -2){
+				if(current_slide[which_slider] + 1 < number_of_slides[which_slider])
+					which_slide = current_slide[which_slider] + 1;
+				else
+					which_slide = current_slide[which_slider];
+			}
+			clearTimeout(slider_set_time_out[which_slider]);
+			set_slider_css(which_slide, which_slider);
+			set_slider_circles(which_slide, which_slider);
+			set_slider_text(which_slide, which_slider);
+			current_slide[which_slider] =  ((which_slide + 1) - 1) % number_of_slides[0];
+			slider_set_time_out[which_slider] = setTimeout(function(){slider((which_slide + 1) % number_of_slides[0],which_slider)}, 7000);
+		}
+		slider(0,0);
 	</script>
 </body>
 </html>
