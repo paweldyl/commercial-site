@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>buisness page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="css/arrow-embedded.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class = "container">
+		<div class="darken"></div>
+		<header>
+			<div class = "container-burger">
+				<div class = "burger_absolute ">
+					<a class = "burger_menu" onclick = "showHide()">
+						<div class = "burger_line1"></div>
+						<div class = "burger_line2"></div>
+						<div class = "burger_line3"></div>
+					</a>
+					<nav class = "hidden_nav">	
+						<a href = "index.html" id = "logo" class = "nav_item">
+							Company
+						</a>
+						<a href = "products.html" class = "nav_item">
+							produkty
+						</a>
+						<a href = "aboutsus.html" class = "nav_item">
+							o nas
+						</a>
+						<a href = "gallery.html" class = "nav_item">
+							galeria
+						</a>
+						<a href = "job.html" class = "nav_item">
+							praca
+						</a>
+					</nav>
+				</div>
+				<div class = "dark" onclick="showHide()"></div>
+			</div>
+			<nav class = "upper_nav">
+				<a href = "index.html" id = "logo" class = "nav_item">
+					Company
+				</a>
+				<a href = "products.html" class = "nav_item">
+					produkty
+				</a>
+				<a href = "aboutus.html" class = "nav_item">
+					o nas
+				</a>
+				<a href = "gallery.html" class = "nav_item">
+					galeria
+				</a>
+				<a href = "job.html" class = "nav_item">
+					praca
+				</a>
+			</nav>
+		</header>
+		<main>
+			<section class = "job_offers">
+				<section class = "job_offer">
+					<div class = "job_header">Junior front-end</div>
+					<div class = "job_info_req_info">
+						<section class = "job_info">
+							informacje:
+							<div class = "job_info_container">
+								<div class = "job_section">widełki: 3000-6000 netto</div>
+								<div class = "job_section">zdalna</div>
+								<div class = "job_section">B2B</div>
+							</div>
+						</section>		
+						<section class = "job_info">
+							wymagania:
+							<div class = "job_info_container">
+								<div class = "job_section">html/css</div>
+								<div class = "job_section">rwd</div>
+								<div class = "job_section">javascript</div>
+							</div>
+						</section>
+					</div>
+					<section class = "job_description" onclick="showHideDescription(this)">
+						<div class = "job_show"><div style = "display: flex;">opis <p class = "job_show_arrow"> > </p></div>
+						<div class = "job_text">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis porttitor ipsum, ac convallis lorem. Suspendisse vitae iaculis leo, sit amet tempor velit. Morbi ornare bibendum eros in tempus. Cras consequat diam sit amet neque sodales imperdiet bibendum eget est. Sed eget metus metus. Nullam justo nisi, luctus non commodo ac, ultrices sit amet est. Vivamus tempor mauris in leo pellentesque, in commodo nisi aliquam. Nunc dapibus, est in feugiat condimentum, enim tortor ultricies turpis, at finibus metus lorem sed libero. Pellentesque sit amet libero eget ligula venenatis imperdiet. Fusce molestie lectus nulla, quis dignissim enim finibus eget. Maecenas at venenatis dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam quis lorem sapien. Praesent scelerisque ipsum a eros elementum, vel consequat nisl vestibulum. Aenean commodo lectus vel felis sodales, ut gravida tellus consectetur.
+
+							Donec felis ligula, volutpat vitae ante in, dignissim vehicula nibh. Donec commodo aliquam dolor, non volutpat nunc viverra et. Nam ut est ullamcorper, ultrices quam in, egestas nisi. Phasellus id eros sed mi rhoncus luctus. Donec pharetra risus ac tellus vulputate, et tincidunt neque feugiat. Quisque ultricies lacus et pretium fermentum. Donec eleifend hendrerit semper.
+						</div>
+					</section>
+				</section>
+				<section class = "job_offer">
+					<div class = "job_header">Mid c++ developer</div>
+					<div class = "job_info_req_info">
+						<section class = "job_info">
+							informacje:
+							<div class = "job_info_container">
+								<div class = "job_section">widełki: 5000-8000 netto</div>
+								<div class = "job_section">zdalna</div>
+								<div class = "job_section">B2B</div>
+							</div>
+						</section>		
+						<section class = "job_info">
+							wymagania:
+							<div class = "job_info_container">
+								<div class = "job_section">html/css</div>
+								<div class = "job_section">rwd</div>
+								<div class = "job_section">javascript</div>
+							</div>
+						</section>
+					</div>
+					<section class = "job_description" onclick="showHideDescription(this)">
+						<div class = "job_show"><div style = "display: flex;">opis <p class = "job_show_arrow"> > </p></div>
+						<div class = "job_text">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis porttitor ipsum, ac convallis lorem. Suspendisse vitae iaculis leo, sit amet tempor velit. Morbi ornare bibendum eros in tempus. Cras consequat diam sit amet neque sodales imperdiet bibendum eget est. Sed eget metus metus. Nullam justo nisi, luctus non commodo ac, ultrices sit amet est. Vivamus tempor mauris in leo pellentesque, in commodo nisi aliquam. Nunc dapibus, est in feugiat condimentum, enim tortor ultricies turpis, at finibus metus lorem sed libero. Pellentesque sit amet libero eget ligula venenatis imperdiet. Fusce molestie lectus nulla, quis dignissim enim finibus eget. Maecenas at venenatis dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam quis lorem sapien. Praesent scelerisque ipsum a eros elementum, vel consequat nisl vestibulum. Aenean commodo lectus vel felis sodales, ut gravida tellus consectetur.
+
+							Donec felis ligula, volutpat vitae ante in, dignissim vehicula nibh. Donec commodo aliquam dolor, non volutpat nunc viverra et. Nam ut est ullamcorper, ultrices quam in, egestas nisi. Phasellus id eros sed mi rhoncus luctus. Donec pharetra risus ac tellus vulputate, et tincidunt neque feugiat. Quisque ultricies lacus et pretium fermentum. Donec eleifend hendrerit semper.
+						</div>
+					</section>
+				</section>
+				<section class = "job_offer">
+					<div class = "job_header">senior fullstack</div>
+					<div class = "job_info_req_info">
+						<section class = "job_info">
+							informacje:
+							<div class = "job_info_container">
+								<div class = "job_section">widełki: 10000-15000 netto</div>
+								<div class = "job_section">na miejscu</div>
+								<div class = "job_section">umowa o pracę</div>
+							</div>
+						</section>		
+						<section class = "job_info">
+							wymagania:
+							<div class = "job_info_container">
+								<div class = "job_section">html/css</div>
+								<div class = "job_section">rwd</div>
+								<div class = "job_section">javascript</div>
+								<div class = "job_section">react</div>
+								<div class = "job_section">typescript</div>
+							</div>
+						</section>
+					</div>
+					<section class = "job_description" onclick="showHideDescription(this)">
+						<div class = "job_show"><div style = "display: flex;">opis <p class = "job_show_arrow"> > </p></div>
+						<div class = "job_text">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis porttitor ipsum, ac convallis lorem. Suspendisse vitae iaculis leo, sit amet tempor velit. Morbi ornare bibendum eros in tempus. Cras consequat diam sit amet neque sodales imperdiet bibendum eget est. Sed eget metus metus. Nullam justo nisi, luctus non commodo ac, ultrices sit amet est. Vivamus tempor mauris in leo pellentesque, in commodo nisi aliquam. Nunc dapibus, est in feugiat condimentum, enim tortor ultricies turpis, at finibus metus lorem sed libero. Pellentesque sit amet libero eget ligula venenatis imperdiet. Fusce molestie lectus nulla, quis dignissim enim finibus eget. Maecenas at venenatis dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam quis lorem sapien. Praesent scelerisque ipsum a eros elementum, vel consequat nisl vestibulum. Aenean commodo lectus vel felis sodales, ut gravida tellus consectetur.
+
+							Donec felis ligula, volutpat vitae ante in, dignissim vehicula nibh. Donec commodo aliquam dolor, non volutpat nunc viverra et. Nam ut est ullamcorper, ultrices quam in, egestas nisi. Phasellus id eros sed mi rhoncus luctus. Donec pharetra risus ac tellus vulputate, et tincidunt neque feugiat. Quisque ultricies lacus et pretium fermentum. Donec eleifend hendrerit semper.
+						</div>
+					</section>
+				</section>
+				<section class = "job_offer">
+					<div class = "job_header">junior frontend</div>
+					<div class = "job_info_req_info">
+						<section class = "job_info">
+							informacje:
+							<div class = "job_info_container">
+								<div class = "job_section">widełki: 1000-1500 netto</div>
+								<div class = "job_section">na miejscu</div>
+								<div class = "job_section">umowa o pracę</div>
+							</div>
+						</section>		
+						<section class = "job_info">
+							wymagania:
+							<div class = "job_info_container">
+								<div class = "job_section">2 lata komercyjnego doświadczenia</div>
+								<div class = "job_section">html/css</div>
+								<div class = "job_section">rwd</div>
+								<div class = "job_section">sass</div>
+								<div class = "job_section">wordpress</div>
+								<div class = "job_section">javascript</div>
+								<div class = "job_section">ES6</div>
+								<div class = "job_section">jquery</div>
+								<div class = "job_section">react</div>
+								<div class = "job_section">redux</div>
+								<div class = "job_section">typescript</div>
+								<div class = "job_section">vue.js</div>
+								<div class = "job_section">NODE.js</div>
+								<div class = "job_section">REST API</div>
+								<div class = "job_section">znajomość testów</div>
+							</div>
+						</section>
+					</div>
+					<section class = "job_description" onclick="showHideDescription(this)">
+						<div class = "job_show"><div style = "display: flex;">opis <p class = "job_show_arrow"> > </p></div>
+						<div class = "job_text">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis porttitor ipsum, ac convallis lorem. Suspendisse vitae iaculis leo, sit amet tempor velit. Morbi ornare bibendum eros in tempus. Cras consequat diam sit amet neque sodales imperdiet bibendum eget est. Sed eget metus metus. Nullam justo nisi, luctus non commodo ac, ultrices sit amet est. Vivamus tempor mauris in leo pellentesque, in commodo nisi aliquam. Nunc dapibus, est in feugiat condimentum, enim tortor ultricies turpis, at finibus metus lorem sed libero. Pellentesque sit amet libero eget ligula venenatis imperdiet. Fusce molestie lectus nulla, quis dignissim enim finibus eget. Maecenas at venenatis dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam quis lorem sapien. Praesent scelerisque ipsum a eros elementum, vel consequat nisl vestibulum. Aenean commodo lectus vel felis sodales, ut gravida tellus consectetur.
+
+							Donec felis ligula, volutpat vitae ante in, dignissim vehicula nibh. Donec commodo aliquam dolor, non volutpat nunc viverra et. Nam ut est ullamcorper, ultrices quam in, egestas nisi. Phasellus id eros sed mi rhoncus luctus. Donec pharetra risus ac tellus vulputate, et tincidunt neque feugiat. Quisque ultricies lacus et pretium fermentum. Donec eleifend hendrerit semper.
+						</div>
+					</section>
+				</section>
+			</section>
+				
+		</main>
+		<address>
+			<div class = "address_div">
+				<p class = "address_title">aktualności</p>
+				<a href = "#">wydarzenia</a>
+				<a href = "#">oferty pracy</a>
+				<a href = "#">produkty</a>
+				<a href = "#">produkty</a>
+			</div>
+			<div class = "address_div">
+				<p class = "address_title">sklep</p>
+				<p></p>
+			</div>
+			<div class = "address_div">
+				<p class = "address_title">kontakt</p>
+				<a href = "#">biuro</a>
+				<a>praca: praca@company.com</a>
+				<a href = "#">produkty</a>
+			</div>
+			<div class = "address_div">
+				<p class = "address_title">o nas</p>
+				<p></p>
+			</div>
+		</address>
+		<footer>
+			Copyright © 2020 Company SA. All rights reserved.
+		</footer>
+	</div>
+	<script type="text/javascript" src = "script.js"></script>
+	<script type="text/javascript">
+		slider(0,0);
+		resize_3d_photo()
+		window.addEventListener("resize", resize_3d_photo);
+	</script>
+</body>
+</html>

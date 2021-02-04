@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>buisness page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="css/arrow-embedded.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class = "container">
+		<div class="darken"></div>
+		<header>
+			<div class = "container-burger">
+				<div class = "burger_absolute ">
+					<a class = "burger_menu" onclick = "showHide()">
+						<div class = "burger_line1"></div>
+						<div class = "burger_line2"></div>
+						<div class = "burger_line3"></div>
+					</a>
+					<nav class = "hidden_nav">	
+						<a href = "index.html" id = "logo" class = "nav_item">
+							Company
+						</a>
+						<a href = "products.html" class = "nav_item">
+							produkty
+						</a>
+						<a href = "aboutsus.html" class = "nav_item">
+							o nas
+						</a>
+						<a href = "gallery.html" class = "nav_item">
+							galeria
+						</a>
+						<a href = "job.html" class = "nav_item">
+							praca
+						</a>
+					</nav>
+				</div>
+				<div class = "dark" onclick="showHide()"></div>
+			</div>
+			<nav class = "upper_nav">
+				<a href = "index.html" id = "logo" class = "nav_item">
+					Company
+				</a>
+				<a href = "products.html" class = "nav_item">
+					produkty
+				</a>
+				<a href = "aboutus.html" class = "nav_item">
+					o nas
+				</a>
+				<a href = "gallery.html" class = "nav_item">
+					galeria
+				</a>
+				<a href = "job.html" class = "nav_item">
+					praca
+				</a>
+			</nav>
+		</header>
+		<main>
+			<article class = "products_container">
+				<nav class = "products_nav">
+					<div class = "products_button" id = "products_courses" value = "asd" onclick="set_products_section(this)">
+						kursy
+					</div>
+					<div class = "products_button" id = "products_computers" onclick="set_products_section(this)">
+						komputery
+					</div>
+					<div class = "products_button" id = "products_software" onclick="set_products_section(this)">		
+						oprogramowanie
+					</div>
+					<div class = "products_button" id = "products_books" onclick="set_products_section(this)">
+						książki
+					</div>
+					<div class = "border_bottom"></div>
+				</nav>
+				<section class = "all_products">
+					<div class = "which_products" id = "courses">
+						<a href = "#" class = "product_item">
+							<div class = "item_img">
+								<img src = "data:image/png;base64,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">
+							</div>
+							<div class = "item_text">
+								<h3 class = "item_title">kurs pythona</h3>
+								<p class = "item_p">
+									w naszym kursie oferujemy naukę pod nadzorem najlepszych specjalistów
+								</p>
+							</div>
+						</a>
+						<a href = "#" class = "product_item">
+							<div class = "item_img">
+								<img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png">
+							</div>
+							<div class = "item_text">
+								<h3 class = "item_title">javascript dla początkujących</h3>
+								<p class = "item_p">
+									nasz kurs dla początkujących wprowadzi cię w tajniki javascripta nawet jeśli prędzej nie miałeś żadnej styczności z programowaniem!
+								</p>
+							</div>
+						</a>
+						<a href = "#" class = "product_item">
+							<div class = "item_img">
+								<img src = "https://4.bp.blogspot.com/-s2EhTt57oeU/XHtQtO1QNLI/AAAAAAAANW8/KYkPQEZUyocSpA2RzqCcVt31imXPi63RACLcBGAs/s1600/Free%2BCourses%2Bto%2Blearn%2BJavaScript.jpg">
+							</div>
+							<div class = "item_text">
+								<h3 class = "item_title">javascript dla zaawansowanych</h3>
+								<p class = "item_p">
+									najlepszy kurs javascripta dla zaawansowanych.
+								</p>
+							</div>
+						</a>
+						<a href = "#" class = "product_item">
+							<div class = "item_img">
+								<img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/213px-ISO_C%2B%2B_Logo.svg.png">
+							</div>
+							<div class = "item_text">
+								<h3 class = "item_title">c++</h3>
+								<p class = "item_p">
+									wprowadzenie do programowania z c++, rozpocząnij swoją kariere w IT razem z nami!
+								</p>
+							</div>
+						</a>
+						<a href = "#" class = "product_item">
+							<div class = "item_img">
+								<img src = "https://devonblog.com/wp-content/uploads/2017/09/codeblauw.jpg">
+							</div>
+							<div class = "item_text">
+								<h3 class = "item_title">pisanie czystego kodu</h3>
+								<p class = "item_p">
+									Z nami nauczysz się pisać lepszy kod!
+								</p>
+							</div>
+						</a>
+					</div>
+					<div class = "which_products" id = "computers">
+						<a href = "#" class = "product_item">
+							<div class = "item_img">
+								<img src = "https://www.vist.pl/dat/oferta/3912b.jpg">
+							</div>
+							<div class = "item_text">
+								<h3 class = "item_title">najlepszy komputer</h3>
+								<p class = "item_p">
+									najlepszy komputer oferujący świetne osiągi
+								</p>
+							</div>
+						</a>
+						<a href = "#" class = "product_item">
+							<div class = "item_img">
+								<img src = "https://pcforce.pl/userdata/gfx/652158.jpg">
+							</div>
+							<div class = "item_text">
+								<h3 class = "item_title">średni komputer</h3>
+								<p class = "item_p">
+									komputer ze średniej pułki cenowej
+								</p>
+							</div>
+						</a>
+						<a href = "#" class = "product_item">
+							<div class = "item_img">
+								<img src = "https://stat-m7.ms-online.pl/media/cache/gallery/rc/bggaoc9o/images/21/21162958/acer-predator-orion-3000-po3-600-1.jpg">
+							</div>
+							<div class = "item_text">
+								<h3 class = "item_title">tani komputer</h3>
+								<p class = "item_p">
+									pójdą na nim starsze gry
+								</p>
+							</div>
+						</a>
+					</div>
+					<div class = "which_products" id = "software">
+						<a href = "#" class = "product_item">
+							<div class = "item_img">
+								<img src = "https://www.plm.automation.siemens.com/media/global/pl/is-820219790-640x360_tcm83-49149.jpg">
+							</div>
+							<div class = "item_text">
+								<h3 class = "item_title">oprogramowanie do pracy zdalnej</h3>
+								<p class = "item_p">
+									z naszym programem praca zdalna stanie się jeszcze bardziej wydajna
+								</p>
+							</div>
+						</a>
+						<a href = "#" class = "product_item">
+							<div class = "item_img">
+								<img src = "https://www.plm.automation.siemens.com/media/global/pl/is-820219790-640x360_tcm83-49149.jpg">
+							</div>
+							<div class = "item_text">
+								<h3 class = "item_title">oprogramowanie do pracy zdalnej</h3>
+								<p class = "item_p">
+									z naszym programem praca zdalna stanie się jeszcze bardziej wydajna
+								</p>
+							</div>
+						</a>
+						<a href = "#" class = "product_item">
+							<div class = "item_img">
+								<img src = "https://www.plm.automation.siemens.com/media/global/pl/is-820219790-640x360_tcm83-49149.jpg">
+							</div>
+							<div class = "item_text">
+								<h3 class = "item_title">oprogramowanie do pracy zdalnej</h3>
+								<p class = "item_p">
+									z naszym programem praca zdalna stanie się jeszcze bardziej wydajna
+								</p>
+							</div>
+						</a>
+						<a href = "#" class = "product_item">
+							<div class = "item_img">
+								<img src = "https://www.plm.automation.siemens.com/media/global/pl/is-820219790-640x360_tcm83-49149.jpg">
+							</div>
+							<div class = "item_text">
+								<h3 class = "item_title">oprogramowanie do pracy zdalnej</h3>
+								<p class = "item_p">
+									z naszym programem praca zdalna stanie się jeszcze bardziej wydajna
+								</p>
+							</div>
+						</a>
+						<a href = "#" class = "product_item">
+							<div class = "item_img">
+								<img src = "https://www.plm.automation.siemens.com/media/global/pl/is-820219790-640x360_tcm83-49149.jpg">
+							</div>
+							<div class = "item_text">
+								<h3 class = "item_title">oprogramowanie do pracy zdalnej</h3>
+								<p class = "item_p">
+									z naszym programem praca zdalna stanie się jeszcze bardziej wydajna
+								</p>
+							</div>
+						</a>
+						<a href = "#" class = "product_item">
+							<div class = "item_img">
+								<img src = "https://www.plm.automation.siemens.com/media/global/pl/is-820219790-640x360_tcm83-49149.jpg">
+							</div>
+							<div class = "item_text">
+								<h3 class = "item_title">oprogramowanie do pracy zdalnej</h3>
+								<p class = "item_p">
+									z naszym programem praca zdalna stanie się jeszcze bardziej wydajna
+								</p>
+							</div>
+						</a>
+						<a href = "#" class = "product_item">
+							<div class = "item_img">
+								<img src = "https://www.plm.automation.siemens.com/media/global/pl/is-820219790-640x360_tcm83-49149.jpg">
+							</div>
+							<div class = "item_text">
+								<h3 class = "item_title">oprogramowanie do pracy zdalnej</h3>
+								<p class = "item_p">
+									z naszym programem praca zdalna stanie się jeszcze bardziej wydajna
+								</p>
+							</div>
+						</a>
+						<a href = "#" class = "product_item">
+							<div class = "item_img">
+								<img src = "https://www.plm.automation.siemens.com/media/global/pl/is-820219790-640x360_tcm83-49149.jpg">
+							</div>
+							<div class = "item_text">
+								<h3 class = "item_title">oprogramowanie do pracy zdalnej</h3>
+								<p class = "item_p">
+									z naszym programem praca zdalna stanie się jeszcze bardziej wydajna
+								</p>
+							</div>
+						</a>
+						<a href = "#" class = "product_item">
+							<div class = "item_img">
+								<img src = "https://www.plm.automation.siemens.com/media/global/pl/is-820219790-640x360_tcm83-49149.jpg">
+							</div>
+							<div class = "item_text">
+								<h3 class = "item_title">oprogramowanie do pracy zdalnej</h3>
+								<p class = "item_p">
+									z naszym programem praca zdalna stanie się jeszcze bardziej wydajna
+								</p>
+							</div>
+						</a>
+					</div>
+					<div class = "which_products" id = "books">
+						<a href = "#" class = "product_item">
+							<div class = "item_img">
+								<img src = "https://image.ceneostatic.pl/data/products/32574407/i-czysty-kod.jpg">
+							</div>
+							<div class = "item_text">
+								<h3 class = "item_title">czysty kod</h3>
+								<p class = "item_p">
+									poznaj najlepsze metody tworzenia doskonałego kodu.
+								</p>
+							</div>
+						</a>
+						<a href = "#" class = "product_item">
+							<div class = "item_img">
+								<img src = "https://image.ceneostatic.pl/data/products/32574407/i-czysty-kod.jpg">
+							</div>
+							<div class = "item_text">
+								<h3 class = "item_title">czysty kod</h3>
+								<p class = "item_p">
+									poznaj najlepsze metody tworzenia doskonałego kodu.
+								</p>
+							</div>
+						</a>
+						<a href = "#" class = "product_item">
+							<div class = "item_img">
+								<img src = "https://image.ceneostatic.pl/data/products/32574407/i-czysty-kod.jpg">
+							</div>
+							<div class = "item_text">
+								<h3 class = "item_title">czysty kod</h3>
+								<p class = "item_p">
+									poznaj najlepsze metody tworzenia doskonałego kodu.
+								</p>
+							</div>
+						</a>
+						<a href = "#" class = "product_item">
+							<div class = "item_img">
+								<img src = "https://image.ceneostatic.pl/data/products/32574407/i-czysty-kod.jpg">
+							</div>
+							<div class = "item_text">
+								<h3 class = "item_title">czysty kod</h3>
+								<p class = "item_p">
+									poznaj najlepsze metody tworzenia doskonałego kodu.
+								</p>
+							</div>
+						</a>
+						<a href = "#" class = "product_item">
+							<div class = "item_img">
+								<img src = "https://image.ceneostatic.pl/data/products/32574407/i-czysty-kod.jpg">
+							</div>
+							<div class = "item_text">
+								<h3 class = "item_title">czysty kod</h3>
+								<p class = "item_p">
+									poznaj najlepsze metody tworzenia doskonałego kodu.
+								</p>
+							</div>
+						</a>
+						<a href = "#" class = "product_item">
+							<div class = "item_img">
+								<img src = "https://image.ceneostatic.pl/data/products/32574407/i-czysty-kod.jpg">
+							</div>
+							<div class = "item_text">
+								<h3 class = "item_title">czysty kod</h3>
+								<p class = "item_p">
+									poznaj najlepsze metody tworzenia doskonałego kodu.
+								</p>
+							</div>
+						</a>
+						<a href = "#" class = "product_item">
+							<div class = "item_img">
+								<img src = "https://image.ceneostatic.pl/data/products/32574407/i-czysty-kod.jpg">
+							</div>
+							<div class = "item_text">
+								<h3 class = "item_title">czysty kod</h3>
+								<p class = "item_p">
+									poznaj najlepsze metody tworzenia doskonałego kodu.
+								</p>
+							</div>
+						</a>
+					</div>
+				</section>
+			</article>
+		</main>
+		<address>
+			<div class = "address_div">
+				<p class = "address_title">aktualności</p>
+				<a href = "#">wydarzenia</a>
+				<a href = "#">oferty pracy</a>
+				<a href = "#">produkty</a>
+				<a href = "#">produkty</a>
+			</div>
+			<div class = "address_div">
+				<p class = "address_title">sklep</p>
+				<p></p>
+			</div>
+			<div class = "address_div">
+				<p class = "address_title">kontakt</p>
+				<a href = "#">biuro</a>
+				<a>praca: praca@company.com</a>
+				<a href = "#">produkty</a>
+			</div>
+			<div class = "address_div">
+				<p class = "address_title">o nas</p>
+				<p></p>
+			</div>
+		</address>
+		<footer>
+			Copyright © 2020 Company SA. All rights reserved.
+		</footer>
+	</div>
+	<script type="text/javascript" src = "script.js"></script>
+	<script type="text/javascript">
+		set_products_section(document.querySelector("#products_courses"))
+	</script>
+</body>
+</html>

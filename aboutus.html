@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>buisness page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="css/arrow-embedded.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class = "container">
+		<div class="darken"></div>
+		<header>
+			<div class = "container-burger">
+				<div class = "burger_absolute ">
+					<a class = "burger_menu" onclick = "showHide()">
+						<div class = "burger_line1"></div>
+						<div class = "burger_line2"></div>
+						<div class = "burger_line3"></div>
+					</a>
+					<nav class = "hidden_nav">	
+						<a href = "index.html" id = "logo" class = "nav_item">
+							Company
+						</a>
+						<a href = "products.html" class = "nav_item">
+							produkty
+						</a>
+						<a href = "aboutsus.html" class = "nav_item">
+							o nas
+						</a>
+						<a href = "gallery.html" class = "nav_item">
+							galeria
+						</a>
+						<a href = "job.html" class = "nav_item">
+							praca
+						</a>
+					</nav>
+				</div>
+				<div class = "dark" onclick="showHide()"></div>
+			</div>
+			<nav class = "upper_nav">
+				<a href = "index.html" id = "logo" class = "nav_item">
+					Company
+				</a>
+				<a href = "products.html" class = "nav_item">
+					produkty
+				</a>
+				<a href = "aboutus.html" class = "nav_item">
+					o nas
+				</a>
+				<a href = "gallery.html" class = "nav_item">
+					galeria
+				</a>
+				<a href = "job.html" class = "nav_item">
+					praca
+				</a>
+			</nav>
+		</header>
+		<main>
+			<section class = "aboutus_headquarters">
+				<h1>Od 20 lat tworzymy najlepsze oprogramowanie na rynku.</h1>
+				<img src= "https://iconics.elmark.com.pl/wp-content/uploads/2019/02/AdobeStock_1.jpeg">
+			</section>
+			<section class = "aboutus_headquarters">
+				<h1>Pracuje z nami ponad 1000 najlepszych specjalistów z branży IT</h1>
+				<img src= "https://zielonalinia.gov.pl/documents/20197/820949/Wiek_programistow.jpg/711a2a09-6350-4f29-ac6f-2c51d1352ba5?t=1522216913715">
+			</section>
+			<section class = "aboutus_headquarters">
+				<h1>Nasza nowa siedziba</h1>
+				<img src= "https://przenosniki-promag.pl/DATA/pliki/o-firmie/ctm.jpg">
+			</section>
+			<section></section>
+		</main>
+		<address>
+			<div class = "address_div">
+				<p class = "address_title">aktualności</p>
+				<a href = "#">wydarzenia</a>
+				<a href = "#">oferty pracy</a>
+				<a href = "#">produkty</a>
+				<a href = "#">produkty</a>
+			</div>
+			<div class = "address_div">
+				<p class = "address_title">sklep</p>
+				<p></p>
+			</div>
+			<div class = "address_div">
+				<p class = "address_title">kontakt</p>
+				<a href = "#">biuro</a>
+				<a>praca: praca@company.com</a>
+				<a href = "#">produkty</a>
+			</div>
+			<div class = "address_div">
+				<p class = "address_title">o nas</p>
+				<p></p>
+			</div>
+		</address>
+		<footer>
+			Copyright © 2020 Company SA. All rights reserved.
+		</footer>
+	</div>
+	<script type="text/javascript" src = "script.js"></script>
+	<script type="text/javascript">
+		slider(0,0);
+		resize_3d_photo()
+		window.addEventListener("resize", resize_3d_photo);
+	</script>
+</body>
+</html>
